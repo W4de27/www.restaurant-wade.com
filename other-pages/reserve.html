@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve a Table</title>
+    <link rel="stylesheet" href="reserve.css">
+    <link rel="stylesheet" href="../fonts/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8fa5bd5302.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-utensils"></i>
+            <h4>Restaurant <br> Wade</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a  href="about.html">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a class="check" href="#reserve">Reserve a Table</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="space" id="reserve"></div>
+
+
+        <section>
+            <div class="card">
+                <div class="left"></div>
+                <div class="right">
+                    <h1>Reservation</h1>
+                    <h2>Book A Table Online</h2>
+                    <table>
+                        <tr>
+                            <td><input type="text" placeholder="Your Name" id="name"></td>
+                            <td>
+                                <select name="people" id="people">
+                                    <option value="1 People">1 People</option>
+                                    <option value="2 Peoples">2 Peoples</option>
+                                    <option value="3 Peoples">3 Peoples</option>
+                                    <option value="4 Peoples">4 Peoples</option>
+                                    <option value="5 Peoples">5 Peoples</option>
+                                </select>
+                            </td>
+                        </tr>
+        
+                        <tr>
+                            <td><input type="radio" checked name="list" id="r1"><label for="r1">Phone</label></td>
+                            <td><input type="radio" name="list" id="r2"><label for="r2">Email</label></td>
+                        </tr>
+        
+                        <tr>
+                            <td><input type="tel" placeholder="Your Phone" id="phone"></td>
+                            <td><input type="email" disabled placeholder="Your Email" id="mail"></td>
+                        </tr>
+        
+                        <tr>
+                            <td><input type="date" id="date"></td>
+                            <td><input type="time" id="time"></td>
+                        </tr>
+        
+                        <tr>
+                            <td colspan="2"><textarea id="msg" placeholder="Special Request"></textarea></td>
+                        </tr>
+        
+                        <tr>
+                            <td align="center" colspan="2"><button id="btn">Reserve Now</button></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <div class="hide" id="hide">
+                <div class="content">
+                <div class="b">
+                    <h1>Your Reservation has been confirmed!</h1>
+                    <i class="fa-solid fa-check"></i>
+                </div>
+
+                <div class="info">
+                    <h2 id="bname"></h2>
+                    <h2 id="bpeople"></h2>
+                    <h2 id="bdate"></h2>
+                    <h2 id="btime"></h2>
+                    <h2 id="bmsg"></h2>
+                    <h2 id="bboth"></h2>
+                </div>
+
+                    <p>We will notify you when your table is available.</p>
+                    
+                    <div class="btn">
+                        <a href="../index.html"><i class="fa-solid fa-home"></i> Return to Homepage</a>
+                    </div>
+                </div>
+        </div>
+
+            <footer>
+                <div class="list" id="contact">
+                    <div class="b1">
+                        <h1>Company</h1>
+                        <ul>
+                            <li><a href="../index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                            <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                            <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                            <li><a href="#reserve"><i class="fa-solid fa-chevron-right"></i> Reserve a Table</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="b2">
+                        <h1>Contact</h1>
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> 11 Street 18, Nador, Morocco</li>
+                            <li><i class="fa-solid fa-phone"></i> +212 623 741864</li>
+                            <li><i class="fa-regular fa-envelope"></i> wademsi01@gmail.com</li>
+                        </ul>
+                        <div class="links"></div>
+                    </div>
+            
+                    <div class="b3">
+                        <h1>Opening</h1>
+                        <h2>Monday - Saturday <br> <span>9AM - 9PM</span></h2>
+                        <h2>Sunday <br> <span>10AM - 8PM</span></h2>
+                    </div>
+            
+                    <div class="b4">
+                        <h1>Newslettre</h1>
+                        <p>
+                            Sign up for our newsletter to receive exclusive offers <br>
+                            and updates about our restaurant and menu.
+                        </p>
+                        <div id="error" class="box">
+                            <input type="email" id="mail" placeholder="Your Email">
+                            <button id="btn">Sign Up</button>
+                            <i id="check" class="fa-solid fa-check"></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <p>&copy; 2024 Restaurant Wade. All rights reserved.</p>
+            </footer>
+        <script src="reserve.js"></script>
+</body>
+</html>

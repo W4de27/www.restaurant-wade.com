@@ -1,0 +1,428 @@
+@font-face {
+    font-family: 'logo';
+    src: url(fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'nav';
+    src: url(fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+@font-face {
+    font-family: 'title';
+    src: url(fonts/Playwrite_GB_J/PlaywriteGBJ-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'text';
+    src: url(fonts/Nerko_One/NerkoOne-Regular.ttf);
+}
+@font-face {
+    font-family: 'button';
+    src: url(fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+@font-face {
+    font-family: 'roboto';
+    src: url(fonts/Roboto/Roboto-ThinItalic.ttf);
+}
+html {
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 25px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 2;
+    border-bottom: 1px solid purple;
+}
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo i {
+    color: purple;
+    font-size: 2.8rem;
+    margin-right: 10px;
+}
+header .logo h4 {
+    color: purple;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: logo;
+    line-height: 100%;
+}
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    list-style: none;
+}
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: nav;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    color: purple;
+    transition: 1s;
+}
+header nav ul li .check {
+    color: white;
+    border-bottom: 2px solid white;
+}
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -4%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleY(1.7);
+    transition: 0.5s;
+    border-top: 2px solid purple;
+    border-bottom: 2px solid purple;
+}
+header nav ul li a:hover::before {
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    background-color: purple;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    transform: scale(0);
+    z-index: -1;
+}
+header nav ul li a:hover::after {
+    transform: scale(1);
+}
+header nav ul li a:hover {
+    color: wheat;
+    border: none;
+}
+
+
+/*  ############################### section ######################## */
+.space {
+    width: 100%;
+    height: 90px;
+}
+
+
+section {
+    width: 100%;
+    height: 565px;
+    background: url(imgs-P2/test2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 50px 0;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+
+section .info {
+    width: 60%;
+    height: 400px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 5px;
+}
+section .info h1 {
+    color: white;
+    margin-bottom: 40px;
+    margin-top: -30px;
+    font-family: title;
+    font-size: 2.7rem;
+    text-align: center;
+    line-height: 110%;
+    text-shadow: 4px 4px 2px rgb(119, 22, 119), 0px 0px 7px wheat;
+    border-left: 7px solid wheat;
+    border-right: 7px solid wheat;
+    padding: 0 30px;
+    border-radius: 50%;
+    border-color: white;
+}
+section .info h1 span {
+    color: rgb(199, 33, 221);
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 2px rgb(225, 221, 225) , 0 0 10px wheat;
+}
+section .info p{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: text;
+    color: wheat;
+    line-height: 160%;
+}
+section .info a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: purple;
+    padding: 30px 60px;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow:  10px 10px 30px rgb(0, 0, 0) , -10px -10px 30px rgb(0, 0, 0);
+    overflow: hidden;
+    top: 84%;
+    left: 68.5%;
+    background-color: black;
+    font-family: button;
+    z-index: 1;
+}
+section .info a::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+}
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+section .info a span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right , #0c002b , purple);
+    animation: animate1 linear 2s infinite;
+    animation-delay: 1s;
+}
+section .info a span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom , #0c002b , purple);
+    animation: animate2 linear 2s infinite;
+}
+section .info a span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to left , #0c002b , purple);
+    animation: animate3 linear 2s infinite;
+    animation-delay: 1s;
+}
+section .info a span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to top , #0c002b , purple);
+    animation: animate4 linear 2s infinite;
+}
+
+
+/* ########################## footer ###########################" */
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 40px 40px 20px;
+    background-color: black;
+}
+footer .list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 100%;
+    height: auto;
+}
+footer .list :where(.b1, .b2, .b3, .b4) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+}
+footer .list :where(.b1,.b2,.b3,.b4) h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: wheat;
+    font-family: title;
+    margin-bottom: 15px;
+}
+footer .list .b1 ul li {
+    list-style: none;
+}
+footer .list .b1 ul li a {
+    list-style: none;
+    color: wheat;
+    text-decoration: none;
+    line-height: 150%;
+    font-family: roboto;
+    font-size: 1.2rem;
+} 
+footer .list .b1 ul li a:hover {
+    color: purple;
+}
+footer .list ul li a i {
+    color: wheat;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+footer .list .b2 ul li {
+    list-style: none;
+    color: wheat;
+    font-family: roboto;
+    line-height: 160%;
+    font-size: 1.2rem;
+}
+footer .list .b2 ul li i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+footer .list .b3 h2 {
+    color: wheat;
+    font-family: roboto;
+    font-size: 1.2rem;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+footer .list .b3 h2 span {
+    font-size: 1.0rem;
+}
+
+footer .list .b4 p {
+    color: wheat;
+    font-family: roboto;
+    margin-bottom: 15px;
+    line-height: 140%;
+    text-align: start;
+}
+footer .list .b4 .box {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid purple;
+    position: relative;
+}
+footer .list .b4 .box input {
+    width: 70%;
+    height: 40px;
+    color: wheat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 1.0rem;
+}
+footer .list .b4 .box button {
+    background-color: purple;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: wheat;
+    font-family: roboto;
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+footer .list .b4 .box i {
+    color: white;
+    position: absolute;
+    right: -50px;
+    font-size: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    padding: 6px;
+    display: none;
+}
+
+footer hr {
+    border: none;
+    outline: none;
+    background-color: rgba(245, 222, 179, 0.442);
+    width: 100%;
+    height: 3px;
+    margin: 20px 0;
+    border-radius: 50px;
+}
+footer p {
+    color: white;
+    font-family: roboto;
+    font-size: 0.9rem;
+    line-height: 160%;
+    text-align: center;
+}

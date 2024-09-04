@@ -1,0 +1,455 @@
+@font-face {
+    font-family: 'logo';
+    src: url(../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'nav';
+    src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'title';
+    src: url(../fonts/Playwrite_GB_J/PlaywriteGBJ-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'text';
+    src: url(../fonts/Nerko_One/NerkoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'button';
+    src: url(../fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../fonts/Roboto/Roboto-ThinItalic.ttf);
+}
+
+@font-face {
+    font-family: 'titleText';
+    src: url(../fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'txt';
+    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 2;
+    border-bottom: 1px solid purple;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo i {
+    color: purple;
+    font-size: 2.8rem;
+    margin-right: 10px;
+}
+
+header .logo h4 {
+    color: purple;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: logo;
+    line-height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: nav;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    color: purple;
+    transition: 1s;
+}
+
+header nav ul li .check {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -4%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleY(1.7);
+    transition: 0.5s;
+    border-top: 2px solid purple;
+    border-bottom: 2px solid purple;
+}
+
+header nav ul li a:hover::before {
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    background-color: purple;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    transform: scale(0);
+    z-index: -1;
+}
+
+header nav ul li a:hover::after {
+    transform: scale(1);
+}
+
+header nav ul li a:hover {
+    color: wheat;
+    border: none;
+}
+
+
+/*  ############################### section ######################## */
+.space {
+    width: 100%;
+    height: 90px;
+}
+section {
+    width: 100%;
+    height: auto;
+}
+section .top {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    background: url(../imgs-P2/service10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section .top h1 {
+    color: wheat;
+    font-size: 2rem;
+    font-family: title;
+}
+section .top h2 {
+    color: whitesmoke;
+    font-size: 3.5rem;
+    font-family: title;
+    text-shadow: 3px 3px 2px purple;
+}
+section .boxs {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+section .boxs .box {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background-color: rgb(0, 0, 0);
+}
+::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 25px;
+}
+section .boxs .box .img {
+    width: 50%;
+    height: 400px;
+    background-color: blue;
+}
+section .boxs .box .info {
+    width: 50%;
+    height: auto;
+}
+section .boxs .box .a1 {
+    background: url(../imgs-P2/welcome.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .a2 {
+    background: url(../imgs-P2/story.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .a3 {
+    background: url(../imgs-P2/missions.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .a4 {
+    background: url(../imgs-P2/team.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .a5 {
+    background: url(../imgs-P2/sets.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .a6 {
+    background: url(../imgs-P2/feedback.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .a7 {
+    background: url(../imgs-P2/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section .boxs .box .info h1 {
+    color: purple;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: title;
+    margin-bottom: 50px;
+}
+section .boxs .box .info p {
+    color: wheat;
+    text-align: start;
+    font-family: txt;
+    line-height: 150%;
+    font-size: 1.2rem;
+}
+section .boxs .box .info ul li {
+    list-style: none;
+}
+section .boxs .box .info ul li i {
+    color: grey;
+    font-size: 1rem;
+}
+section .boxs .box .info ul li span {
+    color: yellow;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+section .boxs .box .info p span {
+    color: rgba(0, 0, 255, 0.671);
+    cursor: pointer;
+}
+section .boxs .box .info p .feedback {
+    color: grey;
+}
+section .boxs .box .info p .king {
+    color: red;
+}
+
+/* ##################### footer ######################## */
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 40px 40px 20px;
+    background-color: black;
+    margin-top: 80px;
+}
+
+footer .list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 100%;
+    height: auto;
+}
+
+footer .list :where(.b1, .b2, .b3, .b4) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer .list :where(.b1, .b2, .b3, .b4) h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: wheat;
+    font-family: title;
+    margin-bottom: 15px;
+}
+
+footer .list .b1 ul li {
+    list-style: none;
+}
+
+footer .list .b1 ul li a {
+    list-style: none;
+    color: wheat;
+    text-decoration: none;
+    line-height: 150%;
+    font-family: roboto;
+    font-size: 1.2rem;
+}
+
+footer .list .b1 ul li a:hover {
+    color: purple;
+}
+
+footer .list ul li a i {
+    color: wheat;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+footer .list .b2 ul li {
+    list-style: none;
+    color: wheat;
+    font-family: roboto;
+    line-height: 160%;
+    font-size: 1.2rem;
+}
+
+footer .list .b2 ul li i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+footer .list .b3 h2 {
+    color: wheat;
+    font-family: roboto;
+    font-size: 1.2rem;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+footer .list .b3 h2 span {
+    font-size: 1.0rem;
+}
+
+footer .list .b4 p {
+    color: wheat;
+    font-family: roboto;
+    margin-bottom: 15px;
+    line-height: 140%;
+    text-align: start;
+}
+
+footer .list .b4 .box {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid purple;
+    position: relative;
+}
+
+footer .list .b4 .box input {
+    width: 70%;
+    height: 40px;
+    color: wheat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 1.0rem;
+}
+
+footer .list .b4 .box button {
+    background-color: purple;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: wheat;
+    font-family: roboto;
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+
+footer .list .b4 .box i {
+    color: white;
+    position: absolute;
+    right: -50px;
+    font-size: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    padding: 6px;
+    display: none;
+}
+
+footer hr {
+    border: none;
+    outline: none;
+    background-color: rgba(245, 222, 179, 0.442);
+    width: 100%;
+    height: 3px;
+    margin: 20px 0;
+    border-radius: 50px;
+}
+
+footer p {
+    color: white;
+    font-family: roboto;
+    font-size: 0.9rem;
+    line-height: 160%;
+    text-align: center;
+}

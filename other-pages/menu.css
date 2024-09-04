@@ -1,0 +1,623 @@
+@font-face {
+    font-family: 'logo';
+    src: url(../fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'nav';
+    src: url(../fonts/Permanent_Marker/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'title';
+    src: url(../fonts/Playwrite_GB_J/PlaywriteGBJ-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'text';
+    src: url(../fonts/Nerko_One/NerkoOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'button';
+    src: url(../fonts/Nova_Mono/NovaMono-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url(../fonts/Roboto/Roboto-ThinItalic.ttf);
+}
+
+@font-face {
+    font-family: 'titleText';
+    src: url(../fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'txt';
+    src: url(../fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: black;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    position: fixed;
+    z-index: 2;
+    border-bottom: 1px solid purple;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo i {
+    color: purple;
+    font-size: 2.8rem;
+    margin-right: 10px;
+}
+
+header .logo h4 {
+    color: purple;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: logo;
+    line-height: 100%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-right: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: nav;
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    color: purple;
+    transition: 1s;
+}
+
+header nav ul li .check {
+    color: white;
+    border-bottom: 2px solid white;
+}
+
+header nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: -4%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleY(1.7);
+    transition: 0.5s;
+    border-top: 2px solid purple;
+    border-bottom: 2px solid purple;
+}
+
+header nav ul li a:hover::before {
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    background-color: purple;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    transform: scale(0);
+    z-index: -1;
+}
+
+header nav ul li a:hover::after {
+    transform: scale(1);
+}
+
+header nav ul li a:hover {
+    color: wheat;
+    border: none;
+}
+
+
+/*  ############################### section ######################## */
+.space {
+    width: 100%;
+    height: 90px;
+}
+
+::-webkit-scrollbar {
+    background-color: black;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: purple;
+    border-radius: 25px;
+}
+
+section {
+    width: 100%;
+    height: auto;
+    background-color: seashell;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+section .menu {
+    background-color: black;
+    width: 75%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .menu .group {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px 5px;
+}
+section .menu .group :where(.b1, .b2, .b3) h1 {
+    color: purple;
+    font-family: title;
+    margin-bottom: 5px;
+}
+section .menu :where(.g1 , .g2) {
+    border-right: 3px solid rgb(47, 47, 47);
+}
+section .menu .group :where(.b1 , .b2 , .b3) .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: auto;
+    padding: 5.8px;
+}
+section .menu .group :where(.b1, .b2, .b3) .menu-item .item-name {
+    color: wheat;
+    font-family: titleText;
+    font-size: 1rem;
+}
+section .menu .group :where(.b1, .b2, .b3) .menu-item .both .item-price {
+    color: yellow;
+    font-family: title;
+    font-size: 0.8rem;
+}
+section .menu .group :where(.b1, .b2, .b3) .menu-item .both button {
+    color: black;
+    background-color: wheat;
+    padding: 6px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: all 0.5s;
+}
+section .menu .group :where(.b1, .b2, .b3) .menu-item .both button:hover {
+    background-color: purple;
+    color: wheat;
+    border-radius: 5px;
+}
+
+section .order {
+    width: calc(100% - 75%);
+    height: 562px;
+    background-color: rgba(146, 146, 146, 0.618);
+    border-left: 5px solid red;
+    padding: 10px;
+    overflow: auto;
+}
+section .order h2 {
+    text-align: center;
+    font-family: title;
+    color: purple;
+}
+section .order hr {
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+section .order div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+section .order div span {
+    color: blue;
+    font-family: titleText;
+}
+section .order div span #total-price {
+    margin-right: 20px;
+}
+section .order #order-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+}
+section .order #order-list li {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: square;
+    width: 100%;
+    margin-bottom: 5px;
+    font-family: titleText;
+}
+section .order #order-list li i {
+    cursor: pointer;
+    color: red;
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+}
+section .order #order-list li i:hover {
+    background-color: black;
+    color: red;
+    border-radius: 5px;
+}
+section .order button {
+    color: purple;
+    background-color: black;
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-family: titleText;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+section .order button:hover {
+    background-color: purple;
+    color: wheat;
+}
+
+
+
+.hide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.886);
+    left: 0;
+    top: 0;
+    z-index: 120;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    visibility: hidden;
+}
+.hide .card {
+    width: 40%;
+    height: auto;
+    background-color: black;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+.hide .card .ticket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+}
+.hide .card .ticket hr {
+    width: 25%;
+    height: 5px;
+    background-color: purple;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.hide .card .ticket span {
+    color: wheat;
+    font-family: titleText;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.hide .card h1 {
+    color: wheat;
+    text-align: center;
+    font-family: title;
+    font-size: 2.2rem;
+
+}
+.hide .card h2 {
+    color: purple;
+    text-align: center;
+    margin: 25px 0;
+    font-size: 1.5rem;
+    font-family: roboto;
+    line-height: 140%;
+}
+.hide .card a {
+    color: wheat;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: titleText;
+    background-color: purple;
+    padding: 12px 50px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+.hide .card a:hover {
+    background-color: wheat;
+    color: purple;
+}
+section .menu .group :where(.b1,.b2,.b3) {
+    position: relative;
+}
+section .menu .group .b1 .img1{
+    width: 120px;
+    position: absolute;
+    right: 60px;
+    top: -20px;
+    transform: rotate(10deg);
+}
+section .menu .group .b1 .img2{
+    width: 70px;
+    position: absolute;
+    right: 100px;
+    top: -15px;
+    transform: rotate(10deg);
+}
+section .menu .group .b1 .img3{
+    width: 120px;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    transform: rotate(10deg);
+}
+section .menu .group .b2 .img4{
+    width: 120px;
+    position: absolute;
+    right: 90px;
+    top: -25px;
+    transform: rotate(10deg);
+}
+section .menu .group .b2 .img5{
+    width: 120px;
+    position: absolute;
+    right: 80px;
+    top: -10px;
+    transform: rotate(10deg);
+}
+section .menu .group .b2 .img6{
+    width: 130px;
+    position: absolute;
+    right: 35px;
+    top: -35px;
+    transform: rotate(10deg);
+}
+section .menu .group .b3 .img7{
+    width: 90px;
+    position: absolute;
+    right: 90px;
+    top: -10px;
+}
+section .menu .group .b3 .img8{
+    width: 80px;
+    position: absolute;
+    right: 70px;
+    top: -30px;
+}
+section .menu .group .b3 .img9{
+    width: 60px;
+    position: absolute;
+    right: 10px;
+    top: -30px;
+}
+
+
+/*  #################  footer ################# */
+
+footer {
+    width: 100%;
+    height: auto;
+    padding: 40px 40px 20px;
+    background-color: black;
+    margin-top: 80px;
+    border-top: 1px solid purple;
+    box-shadow: 0 -5px 5px purple;
+}
+
+footer .list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 100%;
+    height: auto;
+}
+
+footer .list :where(.b1, .b2, .b3, .b4) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+}
+
+footer .list :where(.b1, .b2, .b3, .b4) h1 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: wheat;
+    font-family: title;
+    margin-bottom: 15px;
+}
+
+footer .list .b1 ul li {
+    list-style: none;
+}
+
+footer .list .b1 ul li a {
+    list-style: none;
+    color: wheat;
+    text-decoration: none;
+    line-height: 150%;
+    font-family: roboto;
+    font-size: 1.2rem;
+}
+
+footer .list .b1 ul li a:hover {
+    color: purple;
+}
+
+footer .list ul li a i {
+    color: wheat;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+footer .list .b2 ul li {
+    list-style: none;
+    color: wheat;
+    font-family: roboto;
+    line-height: 160%;
+    font-size: 1.2rem;
+}
+
+footer .list .b2 ul li i {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+footer .list .b3 h2 {
+    color: wheat;
+    font-family: roboto;
+    font-size: 1.2rem;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+footer .list .b3 h2 span {
+    font-size: 1.0rem;
+}
+
+footer .list .b4 p {
+    color: wheat;
+    font-family: roboto;
+    margin-bottom: 15px;
+    line-height: 140%;
+    text-align: start;
+}
+
+footer .list .b4 .box {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid purple;
+    position: relative;
+}
+
+footer .list .b4 .box input {
+    width: 70%;
+    height: 40px;
+    color: wheat;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-size: 1.0rem;
+}
+
+footer .list .b4 .box button {
+    background-color: purple;
+    width: 30%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: wheat;
+    font-family: roboto;
+    cursor: pointer;
+    font-size: 1.0rem;
+}
+
+footer .list .b4 .box i {
+    color: white;
+    position: absolute;
+    right: -50px;
+    font-size: 2rem;
+    background-color: green;
+    border-radius: 50%;
+    padding: 6px;
+    display: none;
+}
+
+footer hr {
+    border: none;
+    outline: none;
+    background-color: rgba(245, 222, 179, 0.442);
+    width: 100%;
+    height: 3px;
+    margin: 20px 0;
+    border-radius: 50px;
+}
+
+footer p {
+    color: white;
+    font-family: roboto;
+    font-size: 0.9rem;
+    line-height: 160%;
+    text-align: center;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="../fonts/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8fa5bd5302.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+<header>
+    <div class="logo">
+        <i class="fa-solid fa-utensils"></i>
+        <h4>Restaurant <br> Wade</h4>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a class="check" href="#service">Services</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="reserve.html">Reserve a Table</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="space" id="service"></div>
+
+<section>
+    <div class="top">
+        <h1>Our Services</h1>
+        <h2>Explore Our Services</h2>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <i class="fas fa-user-tie"></i> <br>
+            <h1>Master Chefs</h1>
+            <p>
+                Our culinary team is led by master chefs with years of experience,
+                crafting each dish with passion and precision to
+                deliver unforgettable flavors.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-utensils"></i> <br>
+            <h1>Quality Food</h1>
+            <p>
+                We source the finest ingredients to ensure every meal
+                meets the highest standards of quality, offering you a dining
+                experience that's both delicious and wholesome.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-cart-plus"></i> <br>
+            <h1>Online Order</h1>
+            <p>
+                Enjoy the convenience of ordering your
+                favorite dishes online. With just a few clicks, your meal will be prepared and
+                delivered fresh to your door.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fa-solid fa-clock"></i> <br>
+            <h1>24/7 Services</h1>
+            <p>
+                Whether it's breakfast, lunch, or a late-night snack,
+                we're here to serve you around the clock, providing exceptional
+                service whenever you need it.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-pizza-slice"></i> <br>
+            <h1>Authentic Cuisine</h1>
+            <p>
+                Indulge in the rich flavors of authentic cuisine,
+                where each dish tells a story and brings the traditions of our kitchen
+                to your table.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-box"></i> <br>
+            <h1>Catering Services</h1>
+            <p>
+                Planning an event? Our catering services bring the restaurant experience
+                to your venue, ensuring your guests enjoy the
+                same quality food and service.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-children"></i> <br>
+            <h1>Family Space</h1>
+            <p>
+                At Restaurant Wade, we create a warm and welcoming environment
+                for families, making it the perfect place to gather and
+                enjoy a meal together.
+            </p>
+        </div>
+
+        <div class="card">
+            <i class="fas fa-pencil-alt"></i> <br>
+            <h1>Custom Menus</h1>
+            <p>
+                We offer custom menus tailored to your tastes and dietary needs, ensuring every
+                guest has a memorable dining experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="list" id="contact">
+        <div class="b1">
+            <h1>Company</h1>
+            <ul>
+                <li><a href="../index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                <li><a href="#service"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                <li><a href="menu.html"><i class="fa-solid fa-chevron-right"></i> Menu</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About</a></li>
+                <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+                <li><a href="reserve.html"><i class="fa-solid fa-chevron-right"></i> Reserve a Table</a></li>
+            </ul>
+        </div>
+
+        <div class="b2">
+            <h1>Contact</h1>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i> 11 Street 18, Nador, Morocco</li>
+                <li><i class="fa-solid fa-phone"></i> +212 623 741864</li>
+                <li><i class="fa-regular fa-envelope"></i> wademsi01@gmail.com</li>
+            </ul>
+            <div class="links"></div>
+        </div>
+
+        <div class="b3">
+            <h1>Opening</h1>
+            <h2>Monday - Saturday <br> <span>9AM - 9PM</span></h2>
+            <h2>Sunday <br> <span>10AM - 8PM</span></h2>
+        </div>
+
+        <div class="b4">
+            <h1>Newslettre</h1>
+            <p>
+                Sign up for our newsletter to receive exclusive offers <br>
+                and updates about our restaurant and menu.
+            </p>
+            <div id="error" class="box">
+                <input type="email" id="mail" placeholder="Your Email">
+                <button id="btn">Sign Up</button>
+                <i id="check" class="fa-solid fa-check"></i>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <p>&copy; 2024 Restaurant Wade. All rights reserved.</p>
+</footer>
+
+
+<script>
+    document.getElementById("btn").addEventListener("click", function () {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const check = document.getElementById("check");
+            const email = document.getElementById("mail").value;
+            if (email.match(emailRegex)) {
+                check.style.display = "block";
+                document.getElementById("error").style.cssText =
+                    "border: none; box-shadow: 0 0 0 black; border: 1px solid purple;";
+            } else {
+                check.style.display = "none";
+                document.getElementById("error").style.cssText =
+                    "border: 3px solid red; box-shadow: 0 0 10px red";
+            }
+        });
+
+</script>
+</body>
+</html>
